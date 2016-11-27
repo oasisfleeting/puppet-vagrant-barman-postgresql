@@ -1,0 +1,17 @@
+Barman TODO - Backlog of features for Barman
+Copyright (C) 2011-2016 2ndQuadrant Italia Srl
+
+* TAR storage strategy for backups
+* SSH only connections
+* Centralised WAL hub capability (streaming server)
+* Barman passive nodes (for asynchronous geographical redundancy)
+* Hook scripts for backup delete, WAL archiving, etc.
+* Export/Import of backups
+* External backup sources (e.g. S3)
+* Improve recovery support
+* Sandbox recovery
+* Logical backup integration (pg_dump on sandbox instances)
+* JSON output for full automation
+* Backup validation
+* Windows support
+* ...

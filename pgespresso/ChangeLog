@@ -1,0 +1,88 @@
+2016-07-21  Marco Nenciarini  <marco.nenciarini@2ndquadrant.it>
+
+	Update the ChangeLog file
+
+	Set version to 1.2
+
+2016-06-08  Marco Nenciarini  <marco.nenciarini@2ndquadrant.it>
+
+	Fix crash with 9.5 and tablespaces (Fixes #9)
+	On 9.5, the do_pg_start_backup function requires the tblspcmapfile
+	parameter to be defined if at least one tablespace is present.
+
+	Originally fixed in #8 by Oskari Saarenmaa <os@ohmu.fi>
+
+2016-05-23  Giulio Calacoci  <giulio.calacoci@2ndquadrant.it>
+
+	Change version in README.asciidoc
+
+2016-05-22  Marco Nenciarini  <marco.nenciarini@2ndquadrant.it>
+
+	Update RPM packagin and META.json
+
+	Update the ChangeLog file
+
+	Set version to 1.1
+
+2015-12-16  Marco Nenciarini  <marco.nenciarini@2ndquadrant.it>
+
+	Add compatibility with PostgreSQL 9.5 Fixes: #4
+	The incompatible changes have been introduced with commit
+	72d422a5227ef6f76f412486a395aba9f53bf3f0 during 9.5 development.
+
+	Ref: http://git.postgresql.org/gitweb/?p=postgresql.git;h=72d422a
+
+2014-04-11  Marco Nenciarini  <marco.nenciarini@2ndquadrant.it>
+
+	Update the ChangeLog file
+
+	Add release.sh script
+
+2014-04-08  Gabriele Bartolini  <gabriele.bartolini@2ndQuadrant.it>
+
+	Added RPM spec file
+
+2014-04-02  Giulio Calacoci  <giulio.calacoci@2ndquadrant.it>
+
+	Modified META.json. Added requirements in description and abstract
+
+2014-03-27  Giulio Calacoci  <giulio.calacoci@2ndquadrant.it>
+
+	correction of json syntax
+
+	added META.json file for pgxn
+
+	changed version from 0.1 to 1.0
+
+2014-03-27  Marco Nenciarini  <marco.nenciarini@2ndquadrant.it>
+
+	Fix COPYING file
+
+2014-02-13  Marco Nenciarini  <marco.nenciarini@2ndquadrant.it>
+
+	Added basic testing script
+
+2014-02-13  Gabriele Bartolini  <gabriele.bartolini@2ndQuadrant.it>
+
+	Cosmetic changes on comments
+
+2014-02-13  Marco Nenciarini  <marco.nenciarini@2ndquadrant.it>
+
+	Add pgespresso_abort_backup function
+	pgespresso_abort_backup allows the user to terminate a backup without
+	any knowledge about the backup label content. This function is intended
+	to be called by an error handler.
+
+	Support PostgreSQL 9.2
+
+2014-02-12  Marco Nenciarini  <marco.nenciarini@2ndquadrant.it>
+
+	Write correct file name in "START WAL LOCATION" backup_label's field
+	ThisTimeLineID is always 0 in a normal backend during recovery.
+	We get latest redo apply position timeline and we update it globally
+	to make do_pg_start_backup using the correct value when generate the
+	backup label text
+
+2014-02-10  Gabriele Bartolini  <gabriele.bartolini@2ndQuadrant.it>
+
+	Initial commit
